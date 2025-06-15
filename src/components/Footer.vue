@@ -1,112 +1,61 @@
-<script setup>
-const shops = [
-    { id: 1, name: "Build My Office", link: "https://www.branchfurniture.ca/pages/quiz" },
-    { id: 2, name: "Work From Home ", link: "https://www.branchfurniture.ca/collections/work-from-home" },
-    { id: 3, name: "Branch Gift Card", link: "https://www.branchfurniture.ca/products/branch-gift-card" },
-    { id: 4, name: "Chairs", link: "https://www.branchfurniture.ca/collections/office-chairs" },
-    { id: 5, name: "Desks", link: "https://www.branchfurniture.ca/collections/desks" },
-    { id: 6, name: "Conference", link: "https://www.branchfurniture.ca/collections/conference" },
-    { id: 7, name: "Lounge", link: "https://www.branchfurniture.ca/collections/lounge" },
-    { id: 8, name: "Phone Booths", link: "https://www.branchfurniture.ca/collections/phone-booths" },
-    { id: 9, name: "Packages", link: "https://www.branchfurniture.ca/collections/bundles" },
-    { id: 10, name: "Open box", link: "https://www.branchfurniture.ca/collections/open-box" },
-];
-
-const businesses = [
-    { id: 1, name: "Chat With Sales", link: "https://www.branchfurniture.ca/pages/for-teams" },
-    { id: 2, name: "Trade Program", link: "https://www.branchfurniture.ca/pages/trade" },
-    { id: 3, name: "Free Space Plan", link: "https://www.branchfurniture.ca/pages/plan-your-space" },
-    { id: 4, name: "Case Studies", link: "https://www.branchfurniture.ca/pages/projects" },
-    { id: 5, name: "Conference", link: "https://www.branchfurniture.ca/collections/conference" },
-    { id: 6, name: "Lounge", link: "https://www.branchfurniture.ca/collections/home-lounge" },
-    { id: 7, name: "Team Desks", link: "https://www.branchfurniture.ca/collections/team-desks" },
-    { id: 8, name: "Phone Booths", link: "https://www.branchfurniture.ca/collections/phone-booths" },
-    { id: 9, name: "Space Division", link: "https://www.branchfurniture.ca/collections/panels" },
-];
-
-
-const discoveries = [
-    { id: 1, name: "About Branch", link: "https://www.branchfurniture.ca/pages/about-us" },
-    { id: 2, name: "Trade Branch", link: "https://www.branchfurniture.ca/pages/trade" },
-    { id: 3, name: "Free Space Program", link: "https://www.branchfurniture.ca/pages/plan-your-space" },
-    { id: 4, name: "Design Values", link: "https://www.branchfurniture.ca/pages/design-values" },
-    { id: 5, name: "Ergonomics", link: "https://www.branchfurniture.ca/pages/ergonomics-101" },
-    { id: 6, name: "Branch Blog", link: "https://www.branchfurniture.ca/blogs/turn-key" },
-    { id: 7, name: "Showroom", link: "https://www.branchfurniture.ca/pages/showrooms" },
-    { id: 8, name: "Careers", link: "https://www.branchfurniture.ca/pages/careers" },
-    { id: 9, name: "Press & Media", link: "https://www.branchfurniture.ca/pages/press" },
-    { id: 10, name: "Reviews", link: "https://www.branchfurniture.ca/pages/reviews" },
-];
-
-
-const supportes = [
-    { id: 1, name: "Contact Us", link: "https://www.branchfurniture.ca/pages/contact" },
-    { id: 2, name: "Track My Order", link: "https://www.branchfurniture.ca/pages/track-my-order" },
-    { id: 3, name: "Assembly Guides", link: "https://www.branchfurniture.ca/pages/assembly-guides" },
-    { id: 4, name: "Shipping", link: "https://www.branchfurniture.ca/pages/shipping" },
-    { id: 5, name: "Delivery Options", link: "https://www.branchfurniture.ca/pages/shipping-and-delivery-options" },
-    { id: 6, name: "Returns", link: "https://www.branchfurniture.ca/pages/returns" },
-    { id: 7, name: "Warrantly", link: "https://www.branchfurniture.ca/pages/warranty" },
-    { id: 8, name: "Careers", link: "https://www.branchfurniture.ca/pages/careers" },
-];
-
-</script>
 <template>
-    <div class="w-full bg-[rgb(49,68,56)] py-20">
-        <div class="flex lg:flex-row flex-col text-[#F3EEEA] text-[14px] lg:justify-evenly items-center flex-wrap ">
-            <div class="md:pb-5"><img src="/images/Branch.png" alt="branch brand" class="pb-3 h-[50px] w-[auto] opacity-[75]"><br />
-                <h3 class="item">385 Adelaide St W,Suite</h3>
-                <h3 class="item">200, Toronto ON</h3>
-                <h3 class="item">2025 Branch Canada</h3>
+    <footer  class="bg-gradient-to-b from-purple-700 via-purple-400 to-purple-200 w-full py-8 px-5 shadow-inner">
+        <div class="flex flex-col gap-6 text-center max-w-7xl mx-auto">
+            <!-- Logo/Title -->
+            <div class="flex justify-center items-center">
+                <h2 class="font-bold font1 text-3xl text-white tracking-wide drop-shadow-lg">
+                    Mo<span class="text-purple-100 animate-pulse">v</span>ie<span class="text-yellow-300">.</span>Page
+                </h2>
             </div>
-
-            <div class="flex lg:flex-row flex-col gap-15">
-                <div class="flex flex-row gap-10">
-                    <div class="flex flex-col">
-                        <div class="item">SHOP</div>
-                        <div><a v-for="(shop, index) in shops" :key="shop.id" href="shop.link">{{ shop.name }}<br /></a>
-                        </div>
-                    </div>
-                    <div class="flex flex-col">
-                        <div class="item">BUSINESS</div>
-                        <div><a v-for="(business, index) in businesses" :key="business.id" href="shop.link">{{
-                            business.name
-                                }}<br /></a></div>
-                    </div>
-                </div>
-
-                <div class="flex flex-row gap-10">
-                    <div class="flex flex-col">
-                        <div class="item">EXPLORE</div>
-                        <div><a v-for="(explore, index) in discoveries" :key="explore.id" href="business.link">{{
-                            explore.name
-                                }}<br /></a></div>
-                    </div>
-                    <div class="flex flex-col">
-                        <div class="item">SUPPORT</div>
-                        <div><a v-for="(support, index) in supportes" :key="support.id" href="support.link">{{
-                            support.name
-                                }}<br /></a></div>
-                    </div>
+            
+            <!-- Divider -->
+            <div class="h-px bg-gradient-to-r from-transparent via-purple-300 to-transparent w-3/4 mx-auto my-2"></div>
+            
+            <!-- Links -->
+            <div class="flex flex-wrap justify-center gap-4 md:gap-8 text-sm md:text-base">
+                <a href="#" class="text-purple-900 hover:text-white transition-all duration-300 font-medium">Copyright © 2025</a>
+                <a href="#" class="text-purple-800 hover:text-white transition-all duration-300 font-medium">Privacy & Legal</a>
+                <a href="#" class="text-purple-800 hover:text-white transition-all duration-300 font-medium">Accessibility</a>
+                <a href="#" class="text-purple-800 hover:text-white transition-all duration-300 font-medium">Manage Cookies</a>
+                <div class="flex items-center gap-2 text-purple-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                    </svg>
+                    <span>Language: English (US)</span>
                 </div>
             </div>
-
-            <div>
-                <p>NEWS, OFFERS AND MORE</p> <br />
-                <div class="h-[40px]">
-                    <input type="email" placeholder="EMAIL"
-                        class="lg:w-[175px] w-full md:block h-[40px] bg-[#FFFFFF1F]">
-                    <button type="submit" class=" md:hidden w-[40px] h-[40px] ml-1 bg-[#FFFFFF1F]">></button>
-                </div>
+            
+            <!-- Social Icons -->
+            <div class="flex justify-center gap-5 mt-4">
+                <a href="#" class="text-purple-900 hover:text-white transition-all duration-300 transform hover:scale-125">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+                </a>
+                <a href="#" class="text-purple-900 hover:text-white transition-all duration-300 transform hover:scale-125">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.315 2c2.43 0 2.784.013 3.808.06 1.064.049 1.791.218 2.427.465a4.902 4.902 0 011.153 1.772c.247.636.416 1.363.465 2.427.048 1.067.06 1.407.06 4.123v.08c0 2.643-.012 2.987-.06 4.043-.049 1.064-.218 1.791-.465 2.427a4.902 4.902 0 01-1.153 1.772 4.902 4.902 0 01-1.772 1.153c-.636.247-1.363.416-2.427.465-1.067.048-1.407.06-4.123.06h-.08c-2.643 0-2.987-.012-4.043-.06-1.064-.049-1.791-.218-2.427-.465a4.902 4.902 0 01-1.153-1.772 4.902 4.902 0 01-1.153-1.772c-.247-.636-.416-1.363-.465-2.427-.047-1.024-.06-1.379-.06-3.808v-.63c0-2.43.013-2.784.06-3.808.049-1.064.218-1.791.465-2.427a4.902 4.902 0 011.153-1.772A4.902 4.902 0 015.45 2.525c.636-.247 1.363-.416 2.427-.465C8.901 2.013 9.256 2 11.685 2h.63z"/></svg>
+                </a>
+                <a href="#" class="text-purple-900 hover:text-white transition-all duration-300 transform hover:scale-125">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M8.29 20.251c7.547 0 11.675-6.253 11.675-11.675 0-.178 0-.355-.012-.53A8.348 8.348 0 0022 5.92a8.19 8.19 0 01-2.357.646 4.118 4.118 0 001.804-2.27 8.224 8.224 0 01-2.605.996 4.107 4.107 0 00-6.993 3.743 11.65 11.65 0 01-8.457-4.287 4.106 4.106 0 001.27 5.477A4.072 4.072 0 012.8 9.713v.052a4.105 4.105 0 003.292 4.022 4.095 4.095 0 01-1.853.07 4.108 4.108 0 003.834 2.85A8.233 8.233 0 012 18.407a11.616 11.616 0 006.29 1.84"/></svg>
+                </a>
             </div>
         </div>
-
-    </div>
+    </footer>
 </template>
-<style scoped>
-.item {
-    opacity: 50%;
-    font-weight: 700;
 
+<style scoped>
+footer {
+    background: linear-gradient(to bottom, 
+        #6b21a8,  /* purple-700 */
+        #9d4edd,  /* purple-400 */ 
+        #e9d5ff   /* purple-200 */
+    );
+    box-shadow: inset 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.font1 {
+  font-family: "Frank Ruhl Libre", serif;
 }
 </style>

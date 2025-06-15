@@ -1,29 +1,19 @@
 <script setup>
-import Hero from "./Hero.vue";
-import Comp2 from "./Comp2.vue";
-import Features from "./Features.vue";
-// import Wave from "./Wave.vue";
-import Wavebaslik from "./WaveBaslik.vue";
-import Swiper from "./Swiper.vue";
+import Banner from "./Banner.vue";
 import Footer from "./Footer.vue";
-import Navbar from "./Navbar.vue"
-
+import Popular from "./Popular.vue";
+import Fragman from "./Fragman.vue";
 </script>
 
 <template>
   <div id="container">
-    <Navbar />
-   <Hero />
-   <Comp2 />
-   <Features />
-   <Wavebaslik />
-   <Swiper />
-   <Footer />
+    <Banner />
+    <Popular />
+    
+    <Fragman />
+    <Footer />
+   
   </div>
 </template>
 
-<style scoped>
-
-</style>
-
-
+<style scoped></style>

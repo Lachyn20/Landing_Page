@@ -1,5 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 import HomePage from "../components/HomePage.vue";
+import AboutMovie from "../components/AboutMovie.vue";
+import Banner from "../components/Banner.vue";
+import FavoriteMovies from "../components/FavoriteMovies.vue"
+
 
 
 const routes = [
@@ -8,13 +12,38 @@ const routes = [
     name: "home",
     component: HomePage,
   },
+
+  {
+    path: "/favorite",
+    name: "favorite",
+    component: FavoriteMovies,
+  },
+
+   {
+    path: "/about_movie/:id",
+    name: "about",
+    component: AboutMovie,
+  },
+
+   {
+    path: "/banner",
+    name: "banner",
+    component: Banner,
+  },
+
+];
+
+
+
+const router = createRouter({
+  history: createWebHistory(import.meta.env.BASE_URL),
+  routes,
+});
+
  
   
-  // {
-  //   path: "/jennetAllProjects",
-  //   name: "jennetAllProjects",
-  //   component: JennetAllProjetcs,
-  // },
+export default router;
+  
   // {
   //   path: "/signin",
   //   name: "signin",
@@ -65,11 +94,6 @@ const routes = [
   //   name: "navbar",
   //   component: mainNavbar,
   // },
-];
 
-const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
-  routes,
-});
 
-export default router;
+
